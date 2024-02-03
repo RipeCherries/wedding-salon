@@ -1,4 +1,4 @@
-import { GiSwirlString } from "react-icons/gi";
+import { GiSwirlString } from 'react-icons/gi';
 
 const veils = {
   name: 'veils',

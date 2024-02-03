@@ -1,4 +1,4 @@
-import { GiAmpleDress } from "react-icons/gi";
+import { GiAmpleDress } from 'react-icons/gi';
 
 const dressesRental = {
   name: 'dressesRental',
