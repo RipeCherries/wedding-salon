@@ -1,6 +1,27 @@
-import { dresses, clothingSizes, clothingColors, clothingStyles, dressesRental, veils, decorations } from './documents';
+import {
+  dresses,
+  dressesRental,
+  veils,
+  decorations,
+  shoes,
+  jackets,
+  clothingSizes,
+  clothingColors,
+  clothingStyles,
+} from './documents';
 
 import { customGallery, customDiscount } from './objects';
 
-export const schemaTypes = [dresses, dressesRental, veils, decorations, clothingSizes, clothingColors, clothingStyles, customGallery, customDiscount];
-
+export const schemaTypes = [
+  dresses,
+  dressesRental,
+  veils,
+  decorations,
+  shoes,
+  jackets,
+  clothingSizes,
+  clothingColors,
+  clothingStyles,
+  customGallery,
+  customDiscount,
+];
