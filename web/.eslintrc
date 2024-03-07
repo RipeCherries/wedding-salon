@@ -16,6 +16,6 @@
       "version": "detect"
     }
   },
-  "extends": ["plugin:react/recommended", "airbnb", "prettier", "prettier/react"],
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
   "plugins": ["react", "prettier"]
 }
