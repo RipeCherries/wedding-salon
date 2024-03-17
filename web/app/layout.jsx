@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { Montserrat } from 'next/font/google';
 
 import Header from './components/Header';
+import Hero from './components/Hero';
+import Footer from './components/Footer';
+import Navigation from './components/Navigation';
 
 import './globals.css';
 
@@ -16,9 +19,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang='ru'>
       <body className={montserrat.className}>
-        <main>
+        <main className='flex flex-col justify-between'>
           <Header />
-          <div className='max-w-6xl mx-auto pt-6'>{children}</div>
+          <Hero />
+          <Navigation />
+          <div className='mb-auto relative'>{children}</div>
+          <Footer />
         </main>
       </body>
     </html>
