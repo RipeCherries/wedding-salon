@@ -3,5 +3,14 @@
 @tailwind utilities;
 
 body {
-  @apply bg-main;
+    @apply bg-main;
+}
+
+.slick-slide div {
+    margin: 0 auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 40px !important;
 }
