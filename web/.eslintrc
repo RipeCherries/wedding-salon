@@ -17,5 +17,8 @@
     }
   },
   "extends": ["plugin:react/recommended", "airbnb", "prettier"],
-  "plugins": ["react", "prettier"]
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "jsx-a11y/control-has-associated-label": "off"
+  }
 }
