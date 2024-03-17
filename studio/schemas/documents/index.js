@@ -7,5 +7,19 @@ import jackets from './jackets';
 import clothingSizes from './clothingSizes';
 import clothingColors from './clothingColors';
 import clothingStyles from './clothingStyles';
+import shoesSizes from './shoesSizes';
+import veilsStyles from './veilsStyles';
 
-export { dresses, dressesRental, veils, decorations, shoes, jackets, clothingSizes, clothingColors, clothingStyles };
+export {
+  dresses,
+  dressesRental,
+  veils,
+  decorations,
+  shoes,
+  jackets,
+  clothingSizes,
+  shoesSizes,
+  clothingColors,
+  clothingStyles,
+  veilsStyles,
+};

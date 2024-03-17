@@ -64,11 +64,14 @@ const shoes = {
     {
       name: 'size',
       title: 'Размер:',
-      type: 'number',
-      validation: (Rule) => [
-        Rule.error('Это поле не может быть пустым!').required(),
-        Rule.error('Размер должен быть целым числом!').integer(),
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'shoesSizes' }],
+        },
       ],
+      validation: (Rule) => Rule.error('Это поле не может быть пустым!').required(),
     },
     {
       name: 'color',

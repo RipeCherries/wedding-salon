@@ -6,6 +6,8 @@ import {
   shoes,
   jackets,
   clothingSizes,
+  shoesSizes,
+  veilsStyles,
   clothingColors,
   clothingStyles,
 } from './documents';
@@ -20,8 +22,10 @@ export const schemaTypes = [
   shoes,
   jackets,
   clothingSizes,
+  shoesSizes,
   clothingColors,
   clothingStyles,
+  veilsStyles,
   customGallery,
   customDiscount,
 ];

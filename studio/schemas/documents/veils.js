@@ -86,6 +86,19 @@ const veils = {
       ],
     },
     {
+      name: 'style',
+      title: 'Стиль фаты:',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'veilsStyles' }],
+        },
+      ],
+      description: 'Выберите фасон',
+      validation: (Rule) => Rule.error('Это поле не может быть пустым!').required(),
+    },
+    {
       name: 'description',
       title: 'Описание:',
       type: 'text',
