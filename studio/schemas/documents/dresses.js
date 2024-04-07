@@ -35,7 +35,7 @@ const dresses = {
       name: 'video',
       title: 'Видео:',
       type: 'string',
-      description: 'Ссылка на видео',
+      description: 'Ссылка на видео. Необязательный параметр',
     },
     {
       name: 'article',
@@ -71,7 +71,10 @@ const dresses = {
           to: [{ type: 'clothingSizes' }],
         },
       ],
-      validation: (Rule) => Rule.error('Это поле не может быть пустым!').required(),
+      validation: (Rule) => [
+        Rule.error('Это поле не может быть пустым!').required(),
+        Rule.error('Только уникальные размеры!').unique(),
+      ],
     },
     {
       name: 'color',
@@ -84,7 +87,10 @@ const dresses = {
         },
       ],
       description: 'Выберите цвет товара',
-      validation: (Rule) => Rule.error('Это поле не может быть пустым!').required(),
+      validation: (Rule) => [
+        Rule.error('Это поле не может быть пустым!').required(),
+        Rule.error('Только уникальные цвета!').unique(),
+      ],
     },
     {
       name: 'style',
@@ -97,14 +103,21 @@ const dresses = {
         },
       ],
       description: 'Выберите фасон',
-      validation: (Rule) => Rule.error('Это поле не может быть пустым!').required(),
+      validation: (Rule) => [
+        Rule.error('Это поле не может быть пустым!').required(),
+        Rule.error('Только уникальные фасоны!').unique(),
+      ],
     },
     {
       name: 'description',
       title: 'Описание:',
       type: 'text',
-      description: 'Описание товара',
-      validation: (Rule) => Rule.error('Это поле не может быть пустым!').required(),
+      description: 'Описание товара (250-350 символов)',
+      validation: (Rule) => [
+        Rule.error('Это поле не может быть пустым!').required(),
+        Rule.error('Минимум 200 символов!').min(250),
+        Rule.error('Максимум 350 символов!').max(350),
+      ],
     },
   ],
   preview: {

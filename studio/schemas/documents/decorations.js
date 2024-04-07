@@ -65,8 +65,12 @@ const decorations = {
       name: 'description',
       title: 'Описание:',
       type: 'text',
-      description: 'Описание товара',
-      validation: (Rule) => Rule.error('Это поле не может быть пустым!').required(),
+      description: 'Описание товара (250-350 символов)',
+      validation: (Rule) => [
+        Rule.error('Это поле не может быть пустым!').required(),
+        Rule.error('Минимум 200 символов!').min(250),
+        Rule.error('Максимум 350 символов!').max(350),
+      ],
     },
   ],
   preview: {
