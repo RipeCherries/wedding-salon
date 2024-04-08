@@ -1,4 +1,5 @@
 import {
+  topProducts,
   dresses,
   dressesRental,
   veils,
@@ -15,6 +16,7 @@ import {
 import { customGallery, customDiscount } from './objects';
 
 export const schemaTypes = [
+  topProducts,
   dresses,
   dressesRental,
   veils,

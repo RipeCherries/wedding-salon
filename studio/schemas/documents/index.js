@@ -9,8 +9,10 @@ import clothingColors from './clothingColors';
 import clothingStyles from './clothingStyles';
 import shoesSizes from './shoesSizes';
 import veilsStyles from './veilsStyles';
+import topProducts from './topProducts';
 
 export {
+  topProducts,
   dresses,
   dressesRental,
   veils,
