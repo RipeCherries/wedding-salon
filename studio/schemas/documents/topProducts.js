@@ -14,7 +14,7 @@ const topProducts = {
       of: [
         {
           type: 'reference',
-          to: [{ type: 'dresses' }, { type: 'dressesRental' }, { type: 'veils' }, { type: 'shoes' }, { type: 'jackets' }],
+          to: [{ type: 'dresses' }, { type: 'dressesRental' }, { type: 'veils' }, { type: 'decorations' }, { type: 'shoes' }, { type: 'jackets' }, {type: 'handMade'}],
         },
       ],
       validation: (Rule) => [
