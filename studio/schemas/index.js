@@ -12,7 +12,7 @@ import {
   veilsStyles,
   clothingColors,
   clothingStyles,
-  handMadeType
+  handMadeType,
 } from './documents';
 
 import { customGallery, customDiscount } from './objects';

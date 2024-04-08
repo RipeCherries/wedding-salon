@@ -1,4 +1,4 @@
-import { ImFire } from "react-icons/im";
+import { ImFire } from 'react-icons/im';
 
 const topProducts = {
   name: 'topProducts',
@@ -14,7 +14,15 @@ const topProducts = {
       of: [
         {
           type: 'reference',
-          to: [{ type: 'dresses' }, { type: 'dressesRental' }, { type: 'veils' }, { type: 'decorations' }, { type: 'shoes' }, { type: 'jackets' }, {type: 'handMade'}],
+          to: [
+            { type: 'dresses' },
+            { type: 'dressesRental' },
+            { type: 'veils' },
+            { type: 'decorations' },
+            { type: 'shoes' },
+            { type: 'jackets' },
+            { type: 'handMade' },
+          ],
         },
       ],
       validation: (Rule) => [

@@ -7,7 +7,7 @@ const customDiscount = {
       name: 'hasDiscount',
       title: 'Включить скидку на товар',
       type: 'boolean',
-      initialValue: false
+      initialValue: false,
     },
     {
       name: 'discountPercentage',

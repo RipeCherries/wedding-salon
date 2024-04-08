@@ -1,4 +1,4 @@
-import { FaHandHoldingHeart } from "react-icons/fa6";
+import { FaHandHoldingHeart } from 'react-icons/fa6';
 
 const handMade = {
   name: 'handMade',

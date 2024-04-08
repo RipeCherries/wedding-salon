@@ -1,4 +1,4 @@
-import { FiBox } from "react-icons/fi";
+import { FiBox } from 'react-icons/fi';
 
 const handMadeType = {
   name: 'handMadeType',
@@ -21,6 +21,6 @@ const handMadeType = {
       title: name,
     }),
   },
-}
+};
 
 export default handMadeType;
