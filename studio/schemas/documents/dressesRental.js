@@ -112,10 +112,10 @@ const dressesRental = {
       name: 'description',
       title: 'Описание:',
       type: 'text',
-      description: 'Описание товара (250-350 символов)',
+      description: 'Описание товара (150-350 символов)',
       validation: (Rule) => [
         Rule.error('Это поле не может быть пустым!').required(),
-        Rule.error('Минимум 200 символов!').min(250),
+        Rule.error('Минимум 150 символов!').min(150),
         Rule.error('Максимум 350 символов!').max(350),
       ],
     },
