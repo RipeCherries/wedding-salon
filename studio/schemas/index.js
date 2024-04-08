@@ -5,12 +5,14 @@ import {
   veils,
   decorations,
   shoes,
+  handMade,
   jackets,
   clothingSizes,
   shoesSizes,
   veilsStyles,
   clothingColors,
   clothingStyles,
+  handMadeType
 } from './documents';
 
 import { customGallery, customDiscount } from './objects';
@@ -23,6 +25,7 @@ export const schemaTypes = [
   decorations,
   shoes,
   jackets,
+  handMade,
   clothingSizes,
   shoesSizes,
   clothingColors,
@@ -30,4 +33,5 @@ export const schemaTypes = [
   veilsStyles,
   customGallery,
   customDiscount,
+  handMadeType,
 ];
