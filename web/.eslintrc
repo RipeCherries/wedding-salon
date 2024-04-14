@@ -20,6 +20,7 @@
   "plugins": ["react", "prettier"],
   "rules": {
     "jsx-a11y/control-has-associated-label": "off",
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "no-underscore-dangle": "off"
   }
 }
