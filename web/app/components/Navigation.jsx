@@ -2,9 +2,13 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navigation() {
+  const pathname = usePathname();
+
   const [searchVisible, setSearchVisible] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const toggleSearch = () => {
     setSearchVisible((prevState) => !prevState);
@@ -15,47 +19,42 @@ export default function Navigation() {
       <div className='max-w-6xl mx-auto'>
         <ul className='flex justify-between py-4'>
           <li>
-            <Link href='/' className='text-primary font-semibold py-4 hover:font-bold'>
+            <Link href='/[catalog]' as='/dresses' className='text-primary font-semibold py-4 hover:font-bold'>
               Свадебные платья
             </Link>
           </li>
           <li>
-            <Link href='/' className='text-primary font-semibold py-4 hover:font-bold'>
+            <Link href='/[catalog]' as='veils' className='text-primary font-semibold py-4 hover:font-bold'>
               Фаты
             </Link>
           </li>
           <li>
-            <Link href='/' className='text-primary font-semibold py-4 hover:font-bold'>
+            <Link href='/[catalog]' as='/dresses-rental' className='text-primary font-semibold py-4 hover:font-bold'>
               Прокат
             </Link>
           </li>
           <li>
-            <Link href='/' className='text-primary font-semibold py-4 hover:font-bold'>
+            <Link href='/[catalog]' as='/decorations' className='text-primary font-semibold py-4 hover:font-bold'>
               Аксессуары
             </Link>
           </li>
           <li>
-            <Link href='/' className='text-primary font-semibold py-4 hover:font-bold'>
+            <Link href='/[catalog]' as='/shoes' className='text-primary font-semibold py-4 hover:font-bold'>
               Туфли
             </Link>
           </li>
           <li>
-            <Link href='/' className='text-primary font-semibold py-4 hover:font-bold'>
-              Утро невесты
-            </Link>
-          </li>
-          <li>
-            <Link href='/' className='text-primary font-semibold py-4 hover:font-bold'>
+            <Link href='/[catalog]' as='/jackets' className='text-primary font-semibold py-4 hover:font-bold'>
               Пальто/накидки
             </Link>
           </li>
           <li>
-            <Link href='/' className='text-primary font-semibold py-4 hover:font-bold'>
+            <Link href='/[catalog]' as='/sales' className='text-primary font-semibold py-4 hover:font-bold'>
               Скидки
             </Link>
           </li>
           <li>
-            <Link href='/' className='text-primary font-semibold py-4 hover:font-bold'>
+            <Link href='/[catalog]' as='hand-made' className='text-primary font-semibold py-4 hover:font-bold'>
               HandMade
             </Link>
           </li>
@@ -77,10 +76,20 @@ export default function Navigation() {
               className='h-12 w-full rounded-xl border-primary border-2 pl-4 text-primary bg-main placeholder-primary outline-none'
               type='text'
               placeholder='Введите запрос'
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <button type='button' className='px-8 bg-quaternary rounded-xl text-secondary font-semibold'>
+            <Link
+              href='/[catalog]'
+              as='search'
+              className='px-8 bg-quaternary rounded-xl text-secondary font-semibold flex items-center'
+              onClick={() => {
+                toggleSearch();
+                localStorage.setItem('searchQuery', searchQuery);
+                if (pathname.slice(1) === 'search') window.location.reload();
+              }}
+            >
               Найти
-            </button>
+            </Link>
           </div>
         </div>
       )}
