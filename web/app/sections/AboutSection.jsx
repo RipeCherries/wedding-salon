@@ -46,13 +46,20 @@ export default function AboutSection() {
         </div>
         <div className='flex items-start justify-between gap-6'>
           <div className='w-1/2'>
-            <div className='overflow-hidden relative'>
+            <div className='overflow-hidden relative mt-12'>
               <div
                 className='flex transition ease-out duration-700'
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               >
-                {saloonImages.map((item) => (
-                  <Image src={item} width={600} height={600} alt='Фоточка салона' className='rounded-xl' />
+                {saloonImages.map((item, index) => (
+                  <Image
+                    src={item}
+                    key={`image-${index * 1488}`}
+                    width={600}
+                    height={600}
+                    alt='Фоточка салона'
+                    className='rounded-xl'
+                  />
                 ))}
               </div>
               <button
@@ -90,20 +97,31 @@ export default function AboutSection() {
           </div>
           <div className='flex flex-col justify-center items-center w-1/2'>
             <h3 className='text-xl font-bold text-primary mb-4'>Свадебный салон «Luce e Amore»</h3>
-            <p className='text-primary text-justify mb-4'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Mollis nunc sed id semper risus in hendrerit gravida rutrum. At augue eget arcu
-              dictum varius. Purus in mollis nunc sed id semper risus in. Eu ultrices vitae auctor eu augue ut. Ut sem
-              nulla pharetra diam sit amet. Pretium nibh ipsum consequat nisl. Rutrum tellus pellentesque eu tincidunt
-              tortor. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Nullam vehicula ipsum a
-              arcu cursus vitae congue. Est ultricies integer quis auctor elit. Nunc sed augue lacus viverra vitae. Sit
-              amet facilisis magna etiam tempor orci. Vivamus arcu felis bibendum ut tristique et egestas quis ipsum.
-              Netus et malesuada fames ac turpis egestas. Ante in nibh mauris cursus mattis molestie a iaculis at.
+            <p className='text-primary text-justify mb-2 text-sm indent-8'>
+              Дорогие невесты, Мы приглашаем Вас в свадебный салон «Luce e Amore», где любовь светит ярче и освещает
+              потрясающие свадебные платья различных брендов, фасонов, цветов и размеров от 38 до 62. В место, которое
+              дарит яркие, положительные эмоции и настроение, туда, где каждое платье подобрано нами с любовью и
+              вниманием к деталям, чтобы подчеркнуть вашу неповторимую красоту в этот особенный день.
+            </p>
+            <p className='text-primary text-justify mb-2 text-sm indent-8'>
+              Для нас большое значение имеет индивидуальная работа с каждой невестой, поэтому для вашего удобства мы
+              закладываем то количество времени, в течение которого мы можем с нашей невестой абсолютно в комфортных
+              условиях успеть примерить все понравившиеся платья. В процессе примерки дополнить образ невесты и
+              остановить свой выбор на лучшем из них.
+            </p>
+            <p className='text-primary text-justify mb-2 text-sm indent-8'>
+              И поверьте, наша невероятная команда сделает это с большой радостью, максимальной тщательностью, хорошим
+              настроением, особой заботой и вниманием ко всем деталям, вашим пожеланиям и важным для вас аспектам.
+            </p>
+            <p className='text-primary text-justify mb-4 text-sm indent-8'>
+              А ещё, для наших прекрасных невест мы специально подготовили исключительные и запоминающиеся подарки от
+              нашего бренда «Luce e Amore» в знак признательности за ваше доверие в выборе именно нашего свадебного
+              салона, которые мы дарим в день выдачи свадебного платья.
             </p>
             <a
-              href='/web/public'
+              href='https://wa.me/qr/WHQKHZ2MRPR2M1'
               target='_blank'
-              className='bg-secondary px-8 py-2 font-semibold text-primary rounded-xl'
+              className='bg-primary px-8 py-2 font-semibold text-primary rounded-xl hover:underline'
             >
               Записаться
             </a>
@@ -111,7 +129,7 @@ export default function AboutSection() {
         </div>
         {videoModalIsOpen && (
           <VideoModal
-            youtubeId='GguJODC2cvI?si=oRtZCkatuEnDR8T9'
+            url='https://www.youtube.com/embed/dQw4w9WgXcQ?si=4vlQ1pEM1V_9S1Gh'
             onClose={() => setVideoModalIsOpen((prevState) => !prevState)}
           />
         )}
