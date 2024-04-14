@@ -7,7 +7,7 @@ import { FaFacebook, FaInstagram, FaTelegram, FaTiktok, FaWhatsapp } from 'react
 export default function Footer() {
   return (
     <footer className='bg-primary flex mt-10'>
-      <div className='flex justify-between mx-20 py-6'>
+      <div className='flex justify-between mx-20 py-12'>
         <div className='flex flex-col items-center'>
           <div className='flex gap-4 mb-6'>
             <Link href='/' className='flex items-center'>
@@ -49,42 +49,37 @@ export default function Footer() {
             <nav>
               <ul className='flex flex-col'>
                 <li>
-                  <Link href='/' className='text-primary'>
+                  <Link href='/[catalog]' as='/dresses' className='text-primary'>
                     Свадебные платья
                   </Link>
                 </li>
                 <li>
-                  <Link href='/' className='text-primary'>
+                  <Link href='/[catalog]' as='/jackets' className='text-primary'>
                     Пальто/накидки
                   </Link>
                 </li>
                 <li>
-                  <Link href='/' className='text-primary'>
-                    Утро невесты
-                  </Link>
-                </li>
-                <li>
-                  <Link href='/' className='text-primary'>
+                  <Link href='/[catalog]' as='/decorations' className='text-primary'>
                     Аксессуары
                   </Link>
                 </li>
                 <li>
-                  <Link href='/' className='text-primary'>
+                  <Link href='/[catalog]' as='hand-made' className='text-primary'>
                     HandMade
                   </Link>
                 </li>
                 <li>
-                  <Link href='/' className='text-primary'>
+                  <Link href='/[catalog]' as='/dresses-rental' className='text-primary'>
                     Прокат
                   </Link>
                 </li>
                 <li>
-                  <Link href='/' className='text-primary'>
+                  <Link href='/[catalog]' as='/shoes' className='text-primary'>
                     Туфли
                   </Link>
                 </li>
                 <li>
-                  <Link href='/' className='text-primary'>
+                  <Link href='/[catalog]' as='veils' className='text-primary'>
                     Фаты
                   </Link>
                 </li>
@@ -110,11 +105,6 @@ export default function Footer() {
                 <li>
                   <Link href='/' className='text-primary'>
                     Условия возврата
-                  </Link>
-                </li>
-                <li>
-                  <Link href='/' className='text-primary'>
-                    Реквизиты
                   </Link>
                 </li>
               </ul>
