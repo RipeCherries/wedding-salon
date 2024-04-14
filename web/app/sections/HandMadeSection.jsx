@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { MdNavigateNext } from 'react-icons/md';
 import { FaPlay } from 'react-icons/fa';
+import Link from 'next/link';
 import VideoModal from '../components/VideoModal';
 
 const saloonImages = [
@@ -37,7 +38,7 @@ export default function HandMadeSection() {
   };
 
   return (
-    <section className='py-10 bg-secondary'>
+    <section className='py-10 bg-main'>
       <div className='max-w-6xl mx-auto'>
         <div className='flex items-center mb-6 gap-6 justify-center'>
           <div className='w-36 h-1 bg-quaternary' />
@@ -51,8 +52,15 @@ export default function HandMadeSection() {
                 className='flex transition ease-out duration-700'
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               >
-                {saloonImages.map((item) => (
-                  <Image src={item} width={600} height={600} alt='Фоточка салона' className='rounded-xl' />
+                {saloonImages.map((item, index) => (
+                  <Image
+                    key={`image-${index * 246}`}
+                    src={item}
+                    width={600}
+                    height={600}
+                    alt='Фоточка салона'
+                    className='rounded-xl'
+                  />
                 ))}
               </div>
               <button
@@ -81,7 +89,7 @@ export default function HandMadeSection() {
                   <button
                     onClick={() => setCurrentIndex(i)}
                     type='button'
-                    key={`circle${i*51}`}
+                    key={`circle${i * 51}`}
                     className={`cursor-pointer w-3 h-3 rounded-full ${i === currentIndex ? 'bg-quaternary' : 'bg-main'}`}
                   />
                 ))}
@@ -91,20 +99,26 @@ export default function HandMadeSection() {
           <div className='flex flex-col justify-center items-center w-1/2'>
             <h3 className='text-xl font-bold text-primary mb-4'>Свадебный салон «Luce e Amore»</h3>
             <p className='text-primary text-justify'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Mollis nunc sed id semper risus in hendrerit gravida rutrum. At augue eget arcu
-              dictum varius. Purus in mollis nunc sed id semper risus in. Eu ultrices vitae auctor eu augue ut. Ut sem
-              nulla pharetra diam sit amet. Pretium nibh ipsum consequat nisl. Rutrum tellus pellentesque eu tincidunt
-              tortor. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non. Nullam vehicula ipsum a
-              arcu cursus vitae congue. Est ultricies integer quis auctor elit. Nunc sed augue lacus viverra vitae. Sit
-              amet facilisis magna etiam tempor orci. Vivamus arcu felis bibendum ut tristique et egestas quis ipsum.
-              Netus et malesuada fames ac turpis egestas. Ante in nibh mauris cursus mattis molestie a iaculis at.
+              Luce e Amore представляет эксклюзивные коллекции ручной работы, созданные с любовью и заботой. Каждая
+              свеча, соль для ванны, шипучая бомбочка и ароматическое саше из воска - это маленький шедевр, призванный
+              наполнить ваш дом теплом и уютом. Вдохновленные красотой природы и глубокими чувствами, наши продукты
+              станут источником гармонии и благополучия. Они несут в себе искру радости и покоя, пробуждая чувства и
+              создавая атмосферу любви и взаимопонимания. Позвольте Luce e Amore стать частью вашей жизни, добавляя свет
+              и любовь в каждый момент. Создайте свой собственный ритуал красоты и умиротворения с нашими натуральными,
+              экологически чистыми продуктами.
             </p>
+            <Link
+              href='/[catalog]'
+              as='handmade'
+              className='bg-primary mt-10 px-8 py-2 font-semibold text-primary rounded-xl hover:underline'
+            >
+              О коллекциях
+            </Link>
           </div>
         </div>
         {videoModalIsOpen && (
           <VideoModal
-            youtubeId='GguJODC2cvI?si=oRtZCkatuEnDR8T9'
+            url='https://www.youtube.com/embed/dQw4w9WgXcQ?si=4vlQ1pEM1V_9S1Gh'
             onClose={() => setVideoModalIsOpen((prevState) => !prevState)}
           />
         )}
