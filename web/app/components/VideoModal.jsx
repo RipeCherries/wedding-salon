@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
-export default function VideoModal({ youtubeId, onClose }) {
+export default function VideoModal({ url, onClose }) {
   const modalRef = useRef(null);
 
   useEffect(() => {
@@ -30,12 +30,12 @@ export default function VideoModal({ youtubeId, onClose }) {
 
   return (
     <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center z-50'>
-      <div ref={modalRef} className='bg-secondary p-6 rounded-xl'>
+      <div ref={modalRef} className='bg-primary p-6 rounded-xl'>
         <div className='aspect-w-16 aspect-h-9'>
           <iframe
             className='w-full h-full rounded-xl'
             style={{ width: '800px', height: '450px' }}
-            src={`https://www.youtube.com/embed/${youtubeId}`}
+            src={url}
             title='YouTube video player'
             allowFullScreen
           />
@@ -46,6 +46,6 @@ export default function VideoModal({ youtubeId, onClose }) {
 }
 
 VideoModal.propTypes = {
-  youtubeId: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
 };
