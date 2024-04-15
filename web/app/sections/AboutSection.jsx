@@ -121,6 +121,7 @@ export default function AboutSection() {
             <a
               href='https://wa.me/qr/WHQKHZ2MRPR2M1'
               target='_blank'
+              rel="noreferrer"
               className='bg-primary px-8 py-2 font-semibold text-primary rounded-xl hover:underline'
             >
               Записаться

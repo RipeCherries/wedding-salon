@@ -55,6 +55,7 @@ export default function FeedbackSection() {
           <a
             href='https://go.2gis.com/i24cj'
             target='_blank'
+            rel="noreferrer"
             className='bg-main px-8 py-2 font-semibold text-primary rounded-xl hover:underline'
           >
             Смотреть все отзывы
