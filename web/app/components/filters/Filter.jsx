@@ -41,5 +41,5 @@ Filter.propTypes = {
     styles: PropTypes.arrayOf(PropTypes.string).isRequired,
     minVeilsLength: PropTypes.string.isRequired,
     maxVeilsLength: PropTypes.string.isRequired,
-  }).isRequired
-}
+  }).isRequired,
+};
