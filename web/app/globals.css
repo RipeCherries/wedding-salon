@@ -6,6 +6,10 @@ body {
     @apply bg-main;
 }
 
+.slick-list {
+    margin-left: 15px !important;
+}
+
 .slick-slide div {
     margin: 0 auto;
 }
@@ -13,4 +17,12 @@ body {
 .slick-prev:before,
 .slick-next:before {
     font-size: 40px !important;
+}
+
+@layer base {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 }
