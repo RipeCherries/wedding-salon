@@ -1,4 +1,11 @@
 import React from 'react';
+import { GiAmpleDress, GiReceiveMoney } from 'react-icons/gi';
+import { FaMedal } from 'react-icons/fa';
+import { BiSolidChart, BiSolidUserCheck } from 'react-icons/bi';
+import { IoCalendar, IoResizeOutline } from 'react-icons/io5';
+import { GrLocation } from 'react-icons/gr';
+import { BsListStars } from 'react-icons/bs';
+import { MdFeedback } from 'react-icons/md';
 import {
   MenuSection,
   AssortmentSection,
@@ -7,13 +14,6 @@ import {
   FeedbackSection,
   HandMadeSection,
 } from './sections';
-import { GiAmpleDress, GiReceiveMoney } from 'react-icons/gi';
-import { FaMedal } from 'react-icons/fa';
-import { BiSolidChart, BiSolidUserCheck } from 'react-icons/bi';
-import { IoCalendar, IoResizeOutline } from 'react-icons/io5';
-import { GrLocation } from 'react-icons/gr';
-import { BsListStars } from 'react-icons/bs';
-import { MdFeedback } from 'react-icons/md';
 
 const advantages = [
   {
