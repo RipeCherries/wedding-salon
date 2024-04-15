@@ -74,7 +74,7 @@ export default function Home() {
       <MenuSection />
       <AssortmentSection />
       <AboutSection />
-      {/*<AdvantagesSection advantages={advantages} type='mainPage' />*/}
+      <AdvantagesSection advantages={advantages} type='mainPage' />
       <FeedbackSection />
       <HandMadeSection />
     </main>
