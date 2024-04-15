@@ -44,12 +44,9 @@ export default function ProductPage() {
     async function fetchData() {
       try {
         const data = await fetchProduct(availablePaths[category], slug);
-        console.log(data[0]);
         setProduct(data[0]);
         setIsLoading(true);
-      } catch (error) {
-        console.error('Failed to fetch min and max price:', error);
-      }
+      } catch (error) { /* empty */ }
     }
 
     fetchData();
