@@ -17,16 +17,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='ru'>
-      <body className={montserrat.className}>
-        <main className='flex flex-col justify-between'>
-          <Header />
-          <Hero />
-          <Navigation />
-          <div className='mb-auto relative'>{children}</div>
-          <Footer />
-        </main>
-      </body>
+    <html lang="ru">
+    <body className={montserrat.className}>
+    <main className="flex flex-col justify-between">
+      <Header />
+      <Hero />
+      <Navigation />
+      <div className="mb-auto relative">{children}</div>
+      <Footer />
+    </main>
+    </body>
     </html>
   );
 }
