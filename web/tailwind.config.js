@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'gradientStart': 'rgba(234,213,212,0.7)',
+        'gradientEnd': 'rgba(231,214,192,0.7)'
+      },
       backgroundColor: {
         'main': '#fcf9f4',
         'primary': '#ead5d4',
