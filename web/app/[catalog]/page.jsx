@@ -121,7 +121,7 @@ export default function Catalog() {
               )}
             </div>
             {currentProductsCount !== products.length && (
-              <button type='button' className='mt-4 bg-primary py-2 font-bold text-primary rounded-xl' onClick={() => loadMore()}>
+              <button type='button' className='mt-4 bg-primary py-2 font-bold text-primary rounded-xl hover:underline' onClick={() => loadMore()}>
                 Загрузить еще
               </button>
             )}
