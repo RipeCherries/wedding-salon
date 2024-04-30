@@ -4,11 +4,13 @@ import { FaPlay } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { urlFor } from '../../sanity';
 import VideoModal from "./VideoModal";
+import ImageModal from './ImageModal';
 
 export default function Gallery({ images, video }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [miniMapIndex, setMiniMapIndex] = useState(0);
   const [videoModalIsOpen, setVideoModalIsOpen] = useState(false);
+  const [imageModalIsOpen, setImageModalIsOpen] = useState(false);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
@@ -80,6 +82,7 @@ export default function Gallery({ images, video }) {
           className='w-[400px] h-[450px] object-cover'
           src={urlFor(images[currentIndex]).url()}
           alt={images[currentIndex].alt}
+          onClick={() => setImageModalIsOpen(prevState => !prevState)}
         />
         {images.length > 1 && (
           <button
@@ -111,6 +114,9 @@ export default function Gallery({ images, video }) {
       </div>
       {videoModalIsOpen && (
         <VideoModal url={video} onClose={() => setVideoModalIsOpen((prevState) => !prevState)} />
+      )}
+      {imageModalIsOpen && (
+          <ImageModal url={urlFor(images[currentIndex]).url()} onClose={() => setImageModalIsOpen(prevState => !prevState)} />
       )}
     </div>
   );
