@@ -35,7 +35,7 @@ export default function AssortmentSection() {
       <div className='max-w-7xl mx-auto'>
         <div className='flex items-center mb-6 gap-6 justify-center'>
           <div className='w-36 h-1 bg-quaternary' />
-          <h3 className='text-3xl font-bold text-primary'>Возможно, Вам понравится</h3>
+          <h3 className='text-3xl font-bold text-primary'>Новая коллекция</h3>
           <div className='w-36 h-1 bg-quaternary' />
         </div>
         <Slider slidesToShow={4} slidesToScroll={products.length / 4} speed={1200}>
