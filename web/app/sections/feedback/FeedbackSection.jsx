@@ -39,7 +39,7 @@ const feedbacks = [
 
 export default function FeedbackSection() {
   return (
-    <section className='py-10 bg-primary'>
+    <section className='py-10 bg-main'>
       <div className='max-w-6xl mx-auto'>
         <div className='flex items-center mb-6 gap-6 justify-center'>
           <div className='w-36 h-1 bg-quaternary' />
@@ -56,7 +56,7 @@ export default function FeedbackSection() {
             href='https://go.2gis.com/i24cj'
             target='_blank'
             rel="noreferrer"
-            className='bg-main px-8 py-2 font-semibold text-primary rounded-xl hover:underline'
+            className='bg-primary px-8 py-2 font-semibold text-primary rounded-xl hover:underline'
           >
             Смотреть все отзывы
           </a>

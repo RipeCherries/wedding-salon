@@ -21,7 +21,7 @@ export default function FeedbackCard({ feedback }) {
   };
 
   return (
-    <div className='w-96 max-w-96 bg-main p-6 rounded-2xl flex flex-col'>
+    <div className='w-96 max-w-96 bg-primary p-6 rounded-2xl flex flex-col'>
       <div className='flex mb-4 items-center justify-between'>
         <p className='text-primary font-bold text-xl '>{feedback.clientName}</p>
         <div className='flex'>{renderStars()}</div>
