@@ -38,7 +38,7 @@ export default function HandMadeSection() {
   };
 
   return (
-    <section className='py-10 bg-main'>
+    <section className='py-10 bg-primary'>
       <div className='max-w-6xl mx-auto'>
         <div className='flex items-center mb-6 gap-6 justify-center'>
           <div className='w-36 h-1 bg-quaternary' />
@@ -97,7 +97,7 @@ export default function HandMadeSection() {
             </div>
           </div>
           <div className='flex flex-col justify-center items-center w-1/2'>
-            <h3 className='text-xl font-bold text-primary mb-4'>Свадебный салон «Luce e Amore»</h3>
+            <h3 className='text-xl font-bold text-primary mb-4'>«Luce e Amore»</h3>
             <p className='text-primary text-justify'>
               Luce e Amore представляет эксклюзивные коллекции ручной работы, созданные с любовью и заботой. Каждая
               свеча, соль для ванны, шипучая бомбочка и ароматическое саше из воска - это маленький шедевр, призванный
@@ -110,9 +110,9 @@ export default function HandMadeSection() {
             <Link
               href='/[catalog]'
               as='handmade'
-              className='bg-primary mt-10 px-8 py-2 font-semibold text-primary rounded-xl hover:underline'
+              className='bg-main mt-10 px-8 py-2 font-semibold text-primary rounded-xl hover:underline'
             >
-              О коллекциях
+              Товары
             </Link>
           </div>
         </div>
