@@ -68,7 +68,8 @@ export async function fetchProducts(type, page, filters, sortBy) {
           hasDiscount,
           discountPercentage,
           newPrice
-        }
+        },
+        _type
       }
     `;
 
