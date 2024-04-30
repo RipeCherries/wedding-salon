@@ -78,8 +78,9 @@ export default function Gallery({ images, video }) {
         )}
       </div>
       <div className='relative'>
+        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
         <img
-          className='w-[400px] h-[450px] object-cover'
+          className='w-[400px] h-[450px] object-cover cursor-pointer'
           src={urlFor(images[currentIndex]).url()}
           alt={images[currentIndex].alt}
           onClick={() => setImageModalIsOpen(prevState => !prevState)}
