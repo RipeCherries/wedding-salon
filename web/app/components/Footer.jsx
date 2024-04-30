@@ -10,7 +10,7 @@ export default function Footer() {
       <div className='flex justify-between mx-20 py-12'>
         <div className='flex flex-col items-center'>
           <div className='flex gap-4 mb-6'>
-            <Link href='/' className='flex items-center'>
+            <Link href='/' className='flex items-center hover:underline'>
               <GiAmpleDress size={32} style={{ fill: '#463a3c' }} />
               <span className='ml-2 text-l font-bold text-primary'>Свадебный салон «Luce e Amore»</span>
             </Link>
@@ -49,37 +49,37 @@ export default function Footer() {
             <nav>
               <ul className='flex flex-col'>
                 <li>
-                  <Link href='/[catalog]' as='/dresses' className='text-primary'>
+                  <Link href='/[catalog]' as='/dresses' className='text-primary hover:underline'>
                     Свадебные платья
                   </Link>
                 </li>
                 <li>
-                  <Link href='/[catalog]' as='/jackets' className='text-primary'>
+                  <Link href='/[catalog]' as='/jackets' className='text-primary hover:underline'>
                     Пальто/накидки
                   </Link>
                 </li>
                 <li>
-                  <Link href='/[catalog]' as='/decorations' className='text-primary'>
+                  <Link href='/[catalog]' as='/decorations' className='text-primary hover:underline'>
                     Аксессуары
                   </Link>
                 </li>
                 <li>
-                  <Link href='/[catalog]' as='hand-made' className='text-primary'>
+                  <Link href='/[catalog]' as='hand-made' className='text-primary hover:underline'>
                     HandMade
                   </Link>
                 </li>
                 <li>
-                  <Link href='/[catalog]' as='/dresses-rental' className='text-primary'>
+                  <Link href='/[catalog]' as='/dresses-rental' className='text-primary hover:underline'>
                     Прокат
                   </Link>
                 </li>
                 <li>
-                  <Link href='/[catalog]' as='/shoes' className='text-primary'>
+                  <Link href='/[catalog]' as='/shoes' className='text-primary hover:underline'>
                     Туфли
                   </Link>
                 </li>
                 <li>
-                  <Link href='/[catalog]' as='veils' className='text-primary'>
+                  <Link href='/[catalog]' as='veils' className='text-primary hover:underline'>
                     Фаты
                   </Link>
                 </li>
@@ -88,23 +88,18 @@ export default function Footer() {
             <nav>
               <ul>
                 <li>
-                  <Link href='/' className='text-primary'>
+                  <Link href='/' className='text-primary hover:underline'>
                     Контакты
                   </Link>
                 </li>
                 <li>
-                  <Link href='/' className='text-primary'>
+                  <Link href='/' className='text-primary hover:underline'>
                     О салоне
                   </Link>
                 </li>
                 <li>
-                  <Link href='/' className='text-primary'>
+                  <Link href='/' className='text-primary hover:underline'>
                     Скидки
-                  </Link>
-                </li>
-                <li>
-                  <Link href='/' className='text-primary'>
-                    Условия возврата
                   </Link>
                 </li>
               </ul>
@@ -117,7 +112,7 @@ export default function Footer() {
               </div>
               <div className='flex items-center'>
                 <FaClock size={22} style={{ fill: '#463a3c' }} />
-                <p className='text-primary ml-2'>Пн-Вс, 11:00-22:00</p>
+                <p className='text-primary ml-2'>Пн-Вс, 10:00-21:00</p>
               </div>
               <div className='flex items-center'>
                 <FaTrainSubway size={22} style={{ fill: '#463a3c' }} />
