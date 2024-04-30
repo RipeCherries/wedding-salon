@@ -29,7 +29,7 @@ export default function VideoModal({ url, onClose }) {
   }, []);
 
   return (
-    <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center z-50'>
+    <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 bg-black bg-opacity-50'>
       <div ref={modalRef} className='bg-primary p-6 rounded-xl'>
         <div className='aspect-w-16 aspect-h-9'>
           <iframe
