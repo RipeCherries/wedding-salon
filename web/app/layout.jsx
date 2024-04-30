@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
+import Metrika from './components/Metrika';
 
 import './globals.css';
 
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       <div className="mb-auto relative">{children}</div>
       <Footer />
     </main>
+    <Metrika />
     </body>
     </html>
   );
