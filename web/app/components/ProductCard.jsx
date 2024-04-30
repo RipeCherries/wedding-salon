@@ -44,12 +44,12 @@ export default function ProductCard({ info, type }) {
         src={urlFor(info.img.images[0]).url()}
         alt={info.img.images[0].alt}
       />
-      <p id={info._id} className=' whitespace-normal text-center text-base text-primary font-semibold mb-3'>
+      <p id={info._id} className='whitespace-normal text-center text-base text-primary font-semibold mb-3'>
         {info.title}
       </p>
       <div className='flex gap-6'>
         <p className={`text-center text-primary font-bold ${info.discount.hasDiscount ? 'line-through' : ''}`}>
-          {formatPrice(info.price)} ₽
+          {formatPrice(info.price)} ₽ {info._type === 'dressesRental' && '/ 5 суток'}
         </p>
         {info.discount.hasDiscount && <p className='text-primary font-bold'>{formatPrice(info.discount.newPrice)} ₽</p>}
       </div>
@@ -65,6 +65,7 @@ export default function ProductCard({ info, type }) {
 
 ProductCard.propTypes = {
   info: PropTypes.shape({
+    _type: PropTypes.string.isRequired,
     _id: PropTypes.string.isRequired,
     img: PropTypes.shape({
       images: PropTypes.arrayOf(
