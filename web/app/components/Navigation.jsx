@@ -1,21 +1,37 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function Navigation() {
   const pathname = usePathname();
 
+  const searchRef = useRef(null);
+
   const [searchVisible, setSearchVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        setSearchVisible(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [searchRef]);
 
   const toggleSearch = () => {
     setSearchVisible((prevState) => !prevState);
   };
 
   return (
-    <nav className='bg-secondary py-1 sticky top-16 z-50 h-16'>
+    <nav className='bg-secondary py-1 sticky top-20 z-50 h-16'>
       <div className='max-w-6xl mx-auto'>
         <ul className='flex justify-between py-4'>
           <li>
@@ -70,7 +86,7 @@ export default function Navigation() {
         </ul>
       </div>
       {searchVisible && (
-        <div className='py-2 bg-secondary'>
+        <div className='py-2 bg-secondary' ref={searchRef}>
           <div className='max-w-6xl mx-auto flex w-full gap-4'>
             <input
               className='h-12 w-full rounded-xl border-primary border-2 pl-4 text-primary bg-main placeholder-primary outline-none'
