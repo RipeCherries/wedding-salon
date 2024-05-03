@@ -109,7 +109,7 @@ export default function HandMadeSection() {
             </p>
             <Link
               href='/[catalog]'
-              as='handmade'
+              as='hand-made'
               className='bg-main mt-10 px-8 py-2 font-semibold text-primary rounded-xl hover:underline'
             >
               Товары
