@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
-import { BiSolidCommentError } from 'react-icons/bi';
+import { FaSun } from "react-icons/fa";
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { fetchProducts, fetchTotalProductsCount } from '../../sanity';
@@ -113,10 +113,9 @@ export default function Catalog() {
                   </Link>
                 ))
               ) : (
-                <div className='flex flex-col items-center w-full mt-24'>
-                  <p className='font-bold text-primary text-6xl'>404</p>
-                  <p className='font-semibold text-primary text-2xl'>Извините, по Вашему запросу ничего не найдено</p>
-                  <BiSolidCommentError size={100} style={{ fill: '#463a3c' }} />
+                <div className='flex flex-col items-center w-full mt-24 gap-4'>
+                  <FaSun size={100} style={{ fill: '#463a3c' }} />
+                  <p className='font-semibold text-primary text-2xl'>Вам очень идёт счастье!</p>
                 </div>
               )}
             </div>
