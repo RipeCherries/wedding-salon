@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { MdNavigateNext } from 'react-icons/md';
 import { FaPlay } from 'react-icons/fa';
 import Link from 'next/link';
