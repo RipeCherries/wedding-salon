@@ -32,3 +32,19 @@ body {
 .second__font {
     font-family: "Merriweather", serif;
 }
+
+@media screen and (max-device-width: 450px) {
+    .slick-list {
+        margin-left: 0 !important;
+    }
+
+    .slick-prev {
+        left: 10px !important;
+        z-index: 500 !important;
+    }
+
+    .slick-next {
+        right: 30px !important;
+        z-index: 500 !important;
+    }
+}

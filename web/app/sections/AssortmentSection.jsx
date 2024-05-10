@@ -31,20 +31,31 @@ export default function AssortmentSection() {
   }, []);
 
   return (
-    <section className='py-10 bg-primary'>
+    <section className='xl:py-10 py-4 bg-primary'>
       <div className='max-w-7xl mx-auto'>
-        <div className='flex items-center mb-6 gap-6 justify-center'>
-          <div className='w-36 h-1 bg-quaternary' />
-          <h3 className='text-3xl font-bold text-primary'>Новая коллекция</h3>
-          <div className='w-36 h-1 bg-quaternary' />
+        <div className="flex items-center xl:mb-6 mb-4 xl:gap-6 gap-4 justify-center">
+          <div className="xl:w-36 w-20 h-1 bg-quaternary" />
+          <h3 className="xl:text-3xl text-xl font-bold text-primary">Новая коллекция</h3>
+          <div className="xl:w-36 w-20 h-1 bg-quaternary" />
         </div>
-        <Slider slidesToShow={4} slidesToScroll={products.length / 4} speed={1200}>
-          {products.map((item) => (
-            <Link key={item._id} href='/[product]' as={`${availablePaths[item._type]}/${item.slug.current}`} passHref>
-              <ProductCard info={item} type='mainPage' />
-            </Link>
-          ))}
-        </Slider>
+        <div className='xl:block hidden'>
+          <Slider slidesToShow={4} slidesToScroll={products.length / 4} speed={1200}>
+            {products.map((item) => (
+              <Link key={item._id} href='/[product]' as={`${availablePaths[item._type]}/${item.slug.current}`} passHref>
+                <ProductCard info={item} type='mainPage' />
+              </Link>
+            ))}
+          </Slider>
+        </div>
+        <div className='xl:hidden block'>
+          <Slider slidesToShow={1} slidesToScroll={1} speed={1200}>
+            {products.map((item) => (
+              <Link key={item._id} href='/[product]' as={`${availablePaths[item._type]}/${item.slug.current}`} passHref>
+                <ProductCard info={item} type='mainPage' />
+              </Link>
+            ))}
+          </Slider>
+        </div>
       </div>
     </section>
   );

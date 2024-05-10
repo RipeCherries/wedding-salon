@@ -39,15 +39,15 @@ const feedbacks = [
 
 export default function FeedbackSection() {
   return (
-    <section className='py-10 bg-main'>
+    <section className='xl:py-10 py-4 bg-main'>
       <div className='max-w-6xl mx-auto'>
-        <div className='flex items-center mb-6 gap-6 justify-center'>
-          <div className='w-36 h-1 bg-quaternary' />
-          <h3 className='text-3xl font-bold text-primary'>Отзывы</h3>
-          <div className='w-36 h-1 bg-quaternary' />
+        <div className="flex items-center xl:mb-6 mb-4 xl:gap-6 gap-4 justify-center">
+          <div className="xl:w-36 w-20 h-1 bg-quaternary" />
+          <h3 className="xl:text-3xl text-xl font-bold text-primary">Отзывы</h3>
+          <div className="xl:w-36 w-20 h-1 bg-quaternary" />
         </div>
         <div className='flex flex-col items-center gap-8'>
-          <div className='flex gap-14'>
+          <div className='flex xl:flex-row flex-col xl:gap-14 gap-4'>
             {feedbacks.map((item) => (
               <FeedbackCard key={item.id} feedback={item} />
             ))}

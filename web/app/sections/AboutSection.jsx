@@ -37,26 +37,24 @@ export default function AboutSection() {
   };
 
   return (
-    <section className='py-10'>
+    <section className='xl:py-10 py-4'>
       <div className='max-w-6xl mx-auto'>
-        <div className='flex items-center mb-6 gap-6 justify-center'>
-          <div className='w-36 h-1 bg-quaternary' />
-          <h3 className='text-3xl font-bold text-primary'>О нас</h3>
-          <div className='w-36 h-1 bg-quaternary' />
+        <div className="flex items-center xl:mb-6 mb-4 xl:gap-6 gap-4 justify-center">
+          <div className="xl:w-36 w-20 h-1 bg-quaternary" />
+          <h3 className="xl:text-3xl text-xl font-bold text-primary">О нас</h3>
+          <div className="xl:w-36 w-20 h-1 bg-quaternary" />
         </div>
-        <div className='flex items-start justify-between gap-6'>
-          <div className='w-1/2'>
-            <div className='overflow-hidden relative mt-12'>
+        <div className='flex xl:flex-row flex-col items-start justify-between gap-6'>
+          <div className='xl:w-1/2'>
+            <div className='overflow-hidden relative xl:mt-12'>
               <div
                 className='flex transition ease-out duration-700'
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
               >
                 {saloonImages.map((item, index) => (
-                  <Image
+                  <img
                     src={item}
                     key={`image-${index * 1488}`}
-                    width={600}
-                    height={600}
                     alt='Фоточка салона'
                     className='rounded-xl'
                   />
@@ -95,7 +93,7 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-          <div className='flex flex-col justify-center items-center w-1/2'>
+          <div className='flex flex-col justify-center items-center xl:w-1/2  mx-6 xl:mx-0'>
             <h3 className='text-xl font-bold text-primary mb-4'>Свадебный салон «Luce e Amore»</h3>
             <p className='text-primary text-justify mb-2 text-sm indent-8'>
               Дорогие невесты, Мы приглашаем Вас в свадебный салон «Luce e Amore», где любовь светит ярче и освещает

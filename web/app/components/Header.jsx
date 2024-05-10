@@ -6,17 +6,17 @@ import { FaWhatsapp, FaInstagram, FaTelegram, FaTiktok, FaFacebook } from 'react
 export default function Header() {
 
   return (
-    <header className='bg-primary py-4 h-18 sticky top-0 z-50'>
-      <div className='max-w-6xl mx-auto flex xl:flex-row xl:justify-between flex-col items-center xl:gap-y-0 gap-y-2'>
-        <div className='flex flex-row gap-2 items-center'>
+    <header className='bg-primary py-4 h-18 xl:sticky top-0 z-50'>
+      <div className='max-w-6xl mx-auto flex flex-col xl:flex-row justify-between items-center gap-y-2'>
+        <div className='flex xl:flex-row flex-col gap-2 items-center'>
           <Link href="/">
             <GiAmpleDress size={48} style={{ fill: '#463a3c' }} />
           </Link>
           <div>
-            <Link href="/">
+            <Link href="/" className="flex justify-center xl:block">
               <span className="text-l font-bold text-primary hover:underline">Свадебный салон «Luce e Amore»</span>
             </Link>
-            <h2 className="text-s text-justify text-primary">
+            <h2 className="text-xs xl:text-sm text-justify text-primary">
               г. Новосибирск, ул. Семьи Шамшиных, д. 64, к. 211
             </h2>
           </div>

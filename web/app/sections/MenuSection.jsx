@@ -3,18 +3,18 @@ import Link from 'next/link';
 
 export default function MenuSection() {
   return (
-    <section className="py-10">
+    <section className="xl:py-10 py-4">
       <div className="max-w-8xl mx-auto">
-        <div className="flex items-center mb-6 gap-6 justify-center">
-          <div className="w-36 h-1 bg-quaternary" />
-          <h3 className="text-3xl font-bold text-primary">Ассортимент</h3>
-          <div className="w-36 h-1 bg-quaternary" />
+        <div className="flex items-center xl:mb-6 mb-4 xl:gap-6 gap-4 justify-center">
+          <div className="xl:w-36 w-20 h-1 bg-quaternary" />
+          <h3 className="xl:text-3xl text-xl font-bold text-primary">Ассортимент</h3>
+          <div className="xl:w-36 w-20 h-1 bg-quaternary" />
         </div>
-        <div className="flex flex-row w-full justify-center gap-4">
-          <div className="flex flex-col gap-4 w-1/4">
+        <div className="flex xl:flex-row flex-col xl:w-full justify-center gap-4 xl:mx-0 mx-6">
+          <div className="flex flex-col gap-4 xl:w-1/4">
             <Link href="/[catalog]" as="/dresses-rental">
               <div
-                className="bg-no-repeat bg-cover bg-left relative rounded-3xl w-full h-80 flex items-end justify-center"
+                className="bg-no-repeat bg-cover bg-left relative rounded-3xl w-full xl:h-80 h-40 flex items-end justify-center"
                 style={{ backgroundImage: `url('/images/rental.jpg')` }}
               >
                 <div
@@ -24,7 +24,7 @@ export default function MenuSection() {
             </Link>
             <Link href="/[catalog]" as="/decorations">
               <div
-                className="bg-no-repeat bg-cover bg-center relative rounded-3xl w-full h-52 flex items-end justify-center"
+                className="bg-no-repeat bg-cover bg-center relative rounded-3xl w-full xl:h-52 h-40 flex items-end justify-center"
                 style={{ backgroundImage: `url('/images/accessories.jpg')` }}
               >
                 <div
@@ -33,10 +33,10 @@ export default function MenuSection() {
               </div>
             </Link>
           </div>
-          <div className="flex flex-col gap-4 w-1/5">
+          <div className="flex flex-col gap-4 xl:w-1/5">
             <Link href="/[catalog]" as="veils">
               <div
-                className="bg-no-repeat bg-cover bg-top relative rounded-3xl w-full h-44 flex items-end justify-center"
+                className="bg-no-repeat bg-cover bg-top relative rounded-3xl w-full xl:h-44 h-40 flex items-end justify-center"
                 style={{ backgroundImage: `url('/images/veil.jpg')` }}
               >
                 <div
@@ -46,7 +46,7 @@ export default function MenuSection() {
             </Link>
             <Link href="/[catalog]" as="/jackets">
               <div
-                className="bg-no-repeat bg-cover bg-center relative rounded-3xl w-full h-40 flex items-center"
+                className="bg-no-repeat bg-cover bg-center relative rounded-3xl w-full xl:h-40 h-40 flex items-center"
                 style={{ backgroundImage: `url('/images/mantle.jpg')` }}
               >
                 <div
@@ -60,7 +60,7 @@ export default function MenuSection() {
             </Link>
             <Link href="/[catalog]" as="/shoes">
               <div
-                className="bg-no-repeat bg-cover bg-bottom relative rounded-3xl w-full h-44 flex items-center"
+                className="bg-no-repeat bg-cover bg-bottom relative rounded-3xl w-full xl:h-44 h-40 flex items-center"
                 style={{ backgroundImage: `url('/images/shoes.jpg')` }}
               >
                 <div
@@ -69,10 +69,10 @@ export default function MenuSection() {
               </div>
             </Link>
           </div>
-          <div className="flex flex-col gap-4 w-1/4">
+          <div className="flex flex-col gap-4 xl:w-1/4">
             <Link href="/[catalog]" as="/dresses">
               <div
-                className="bg-no-repeat bg-center relative rounded-3xl w-full h-[544px] flex items-center"
+                className="bg-no-repeat bg-center relative rounded-3xl w-full xl:h-[544px] h-40 flex items-center"
                 style={{ backgroundImage: `url('/images/dress.jpg')` }}
               >
                 <div

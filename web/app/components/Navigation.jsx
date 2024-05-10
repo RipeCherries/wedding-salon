@@ -31,12 +31,15 @@ export default function Navigation() {
   };
 
   return (
-    <nav className='bg-secondary py-1 sticky top-20 z-50 h-16'>
-      <div className='max-w-6xl mx-auto'>
-        <ul className='flex justify-between py-4'>
+    <nav className='bg-secondary py-1 sticky xl:top-20 top-0 z-50 xl:h-16 overflow-x-auto'>
+      <div className='max-w-6xl xl:mx-auto mx-4'>
+        <ul className='flex xl:justify-between gap-x-4 text-center items-center'>
           <li>
-            <Link href='/[catalog]' as='/dresses' className='text-primary font-semibold py-4 hover:font-bold'>
+            <Link href='/[catalog]' as='/dresses' className='text-primary font-semibold py-4 hover:font-bold xl:block hidden'>
               Свадебные платья
+            </Link>
+            <Link href='/[catalog]' as='/dresses' className='text-primary font-semibold py-4 hover:font-bold xl:hidden block'>
+              Платья
             </Link>
           </li>
           <li>
@@ -60,8 +63,11 @@ export default function Navigation() {
             </Link>
           </li>
           <li>
-            <Link href='/[catalog]' as='/jackets' className='text-primary font-semibold py-4 hover:font-bold'>
+            <Link href='/[catalog]' as='/jackets' className='text-primary font-semibold py-4 hover:font-bold xl:block hidden'>
               Пальто/накидки
+            </Link>
+            <Link href='/[catalog]' as='/jackets' className='text-primary font-semibold py-4 hover:font-bold xl:hidden block'>
+              Накидки
             </Link>
           </li>
           <li>
@@ -78,7 +84,7 @@ export default function Navigation() {
             <button
               onClick={() => toggleSearch()}
               type='button'
-              className={`text-primary hover:font-bold ${searchVisible ? 'font-bold' : 'font-semibold'}`}
+              className={`text-primary hover:font-bold ${searchVisible ? 'font-bold' : 'font-semibold'} mr-4 xl:mr-0`}
             >
               Поиск
             </button>
