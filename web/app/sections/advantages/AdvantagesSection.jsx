@@ -11,7 +11,7 @@ export default function AdvantagesSection({ advantages, type }) {
           <h3 className="xl:text-3xl text-xl font-bold text-center text-primary">Почему выбирают именно нас</h3>
           <div className="xl:w-36 w-20 h-1 bg-quaternary" />
         </div>
-        <div className='flex flex-wrap justify-center'>
+        <div className='xl:flex xl:flex-wrap grid grid-cols-2 ml-4 justify-center'>
           {advantages.map((item) => (
             <AdvantagesCard key={item.id} advantage={item} type={type} />
           ))}

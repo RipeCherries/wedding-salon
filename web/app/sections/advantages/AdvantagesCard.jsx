@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function AdvantagesCard({ advantage, type }) {
   return (
-    <div className='min-w-56 max-w-56 p-6 rounded-2xl flex flex-col items-center'>
+    <div className='xl:min-w-56 xl:max-w-56 min-w-48 max-w-48 p-6 rounded-2xl flex flex-col items-center'>
       <div
         className={`w-28 h-28 rounded-full ${type === 'mainPage' ? 'bg-main' : 'bg-primary'} flex justify-center items-center mb-2`}
       >
