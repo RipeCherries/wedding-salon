@@ -35,28 +35,33 @@ export default function ProductCard({ info, type }) {
 
   return (
     <div
-      className={`relative ${type === 'mainPage' ? 'bg-main' : 'bg-primary'} flex flex-col items-center p-2 rounded-xl w-72 h-[430px] cursor-pointer`}
+      className={`relative ${type === 'mainPage' ? 'bg-main' : 'bg-primary'} flex flex-col items-center p-2 rounded-xl xl:w-72 xl:h-[430px] w-44 h-80 cursor-pointer`}
       onMouseEnter={() => handleMouseEnter(info._id)}
       onMouseLeave={() => handleMouseLeave(info._id)}
     >
       <img
-        className='w-80 h-80 rounded-xl mb-2 object-cover'
+        className='xl:w-80 xl:h-80 w-64 h-48 rounded-xl mb-2 object-cover'
         src={urlFor(info.img.images[0]).url()}
         alt={info.img.images[0].alt}
       />
-      <p id={info._id} className='whitespace-normal text-center text-base text-primary font-semibold mb-3'>
+      <p id={info._id} className='whitespace-normal text-center text-base text-primary font-semibold xl:mb-3 mb-1'>
         {info.title}
       </p>
-      <div className='flex gap-6'>
+      <div className='flex xl:flex-row flex-col xl:gap-6 gap-1'>
         <p className={`text-center text-primary font-bold ${info.discount.hasDiscount ? 'line-through' : ''}`}>
           {formatPrice(info.price)} ₽ {info._type === 'dressesRental' && '/ 5 суток'}
         </p>
         {info.discount.hasDiscount && <p className='text-primary font-bold'>{formatPrice(info.discount.newPrice)} ₽</p>}
       </div>
       {info.discount.hasDiscount && (
-        <div className='absolute top-6 left-0 bg-primary flex gap-2 items-center px-4 py-2 rounded-xl'>
-          <BiSolidDiscount size={28} style={{ fill: '#463a3c' }} />
-          <p className='text-primary text-xl font-bold'>{info.discount.discountPercentage} %</p>
+        <div>
+          <div className="absolute top-0 right-0 bg-primary gap-2 items-center px-4 py-2 rounded-xl xl:hidden flex">
+            <p className="text-primary text-xs font-bold">{info.discount.discountPercentage} %</p>
+          </div>
+          <div className="absolute top-6 left-0 bg-primary gap-2 items-center px-4 py-2 rounded-xl xl:flex hidden">
+              <BiSolidDiscount size={28} style={{ fill: '#463a3c' }} />
+            <p className="text-primary text-xl font-bold">{info.discount.discountPercentage} %</p>
+          </div>
         </div>
       )}
     </div>

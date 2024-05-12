@@ -7,9 +7,9 @@ import ColorsFilter from './ColorsFilter';
 import StylesFilter from './StylesFilter';
 import LengthFilter from './LengthFilter';
 
-export default function Filter({ type, filters, updateFilter, search }) {
+export default function Filter({ type, filters, updateFilter, search, onClose }) {
   return (
-    <div className='flex flex-col gap-6 bg-primary p-4 rounded-xl'>
+    <div className='xl:px-4 px-12 flex flex-col gap-6 bg-primary p-4 rounded-xl'>
       <PriceFilter type={type} filters={filters} onFilter={updateFilter} search={search} />
       {type !== 'sales' && <DiscountFilter filters={filters} onFilter={updateFilter} />}
       {(type === 'dresses' || type === 'dressesRental' || type === 'shoes' || type === 'jackets') && (
@@ -24,6 +24,13 @@ export default function Filter({ type, filters, updateFilter, search }) {
         <StylesFilter type={type} onFilter={updateFilter} />
       )}
       {type === 'veils' && <LengthFilter type={type} filters={filters} onFilter={updateFilter} />}
+      <button
+        type='button'
+        onClick={() => onClose()}
+        className="bg-main font-bold text-primary mx-6 h-10 rounded-xl items-center justify-center gap-2 xl:hidden flex"
+      >
+        Применить
+      </button>
     </div>
   );
 }
@@ -42,4 +49,5 @@ Filter.propTypes = {
     minVeilsLength: PropTypes.string.isRequired,
     maxVeilsLength: PropTypes.string.isRequired,
   }).isRequired,
+  onClose: PropTypes.func.isRequired,
 };

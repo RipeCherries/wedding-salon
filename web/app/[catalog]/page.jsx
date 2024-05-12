@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
-import { FaSun } from "react-icons/fa";
+import { FaSun, FaFilter } from 'react-icons/fa';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { fetchProducts, fetchTotalProductsCount } from '../../sanity';
@@ -86,17 +86,30 @@ export default function Catalog() {
     setSortBy(selectedSortBy.value);
   };
 
+  const [isShowFilters, setIsShowFilters] = useState(false);
+  const showFilters = () => {
+    setIsShowFilters(prevState => !prevState);
+  };
+
   return (
-    <main className='py-10'>
-      <div className='max-w-7xl mx-auto'>
-        <div className='flex gap-16'>
-          <div className='w-1/4'>
+    <main className="xl:py-10 py-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex xl:flex-row flex-col xl:gap-16 gap-2">
+          <div className="w-1/4 xl:block hidden">
             <Filter type={availablePaths[pathname.slice(1)]} filters={filters} updateFilter={updateFilter} />
           </div>
-          <div className='flex flex-col w-3/4'>
-            <div className='flex justify-between mb-4'>
-              <div className='flex items-center'>
-                <p className='text-primary font-bold mr-4 cursor-pointer'>Сортировка: </p>
+          <button
+            onClick={() => showFilters()}
+            type="button"
+            className="xl:hidden bg-primary mx-6 h-10 rounded-xl flex items-center justify-center gap-2"
+          >
+            <FaFilter size={20} style={{ fill: '#463a3c' }} />
+            <p className="text-primary font-bold">Фильтры</p>
+          </button>
+          <div className="flex flex-col xl:w-3/4">
+            <div className="flex xl:justify-between justify-center mb-4">
+              <div className="flex xl:flex-row flex-col items-center">
+                <p className="text-primary font-bold mr-4 cursor-pointer">Сортировка: </p>
                 <Select
                   options={options}
                   value={options.find((option) => option.value === sortBy)}
@@ -105,22 +118,34 @@ export default function Catalog() {
                 />
               </div>
             </div>
-            <div className='flex flex-wrap justify-between gap-6' style={{ justifyContent: 'flex-start' }}>
+            <div className={`${isShowFilters ? 'block' : 'hidden'}`}>
+              <Filter
+                type={availablePaths[pathname.slice(1)]}
+                filters={filters}
+                updateFilter={updateFilter}
+                onClose={() => showFilters()}
+              />
+            </div>
+            <div
+              className={`xl:flex xl:flex-wrap xl:justify-between grid ${products.length <= 0 ? 'grid-cols-1' : 'grid-cols-2'} xl:gap-6 gap-x-10 gap-y-4 xl:mx-0 mx-6 ${isShowFilters ? 'hidden' : 'block'}`}
+              style={{ justifyContent: 'flex-start' }}>
               {products.length > 0 ? (
                 products.map((item) => (
-                  <Link key={item._id} href='/[product]' as={`${pathname}/${item.slug.current}`} passHref>
-                    <ProductCard info={item} type='catalog' />
+                  <Link key={item._id} href="/[product]" as={`${pathname}/${item.slug.current}`} passHref>
+                    <ProductCard info={item} type="catalog" />
                   </Link>
                 ))
               ) : (
-                <div className='flex flex-col items-center w-full mt-24 gap-4'>
+                <div className="flex flex-col justify-center items-center w-full mt-24 gap-4">
                   <FaSun size={100} style={{ fill: '#463a3c' }} />
-                  <p className='font-semibold text-primary text-2xl'>Вам очень идёт счастье!</p>
+                  <p className="font-semibold text-primary text-2xl">Вам очень идёт счастье!</p>
                 </div>
               )}
             </div>
             {currentProductsCount !== products.length && (
-              <button type='button' className='mt-4 bg-primary py-2 font-bold text-primary rounded-xl hover:underline' onClick={() => loadMore()}>
+              <button type="button"
+                      className={`mt-4 bg-primary xl:mx-0 mx-6 py-2 font-bold text-primary rounded-xl hover:underline ${isShowFilters ? 'hidden' : 'block'}`}
+                      onClick={() => loadMore()}>
                 Загрузить еще
               </button>
             )}
