@@ -67,15 +67,15 @@ export default function ProductPage() {
   }
 
   return (
-    <main className='py-10'>
+    <main className='xl:py-10 py-4'>
       <div className='max-w-6xl mx-auto'>
-        <div className='flex gap-24'>
-          <div className='w-1/2'>
+        <div className='flex xl:flex-row flex-col xl:gap-24 gap-8'>
+          <div className='xl:w-1/2 flex justify-center'>
             <Gallery images={product.img.images} video={product.video} />
           </div>
-          <div className='w-1/2 flex flex-col justify-between'>
+          <div className='xl:w-1/2 xl:mx-0 mx-6 flex flex-col justify-between'>
             <div>
-              <h3 className='text-primary font-bold uppercase text-xl mb-6'>{product.title}</h3>
+              <h3 className='text-primary xl:text-start text-center font-bold uppercase text-xl mb-6'>{product.title}</h3>
               <p className='text-primary text-justify mb-4'>{product.description}</p>
               {product.color && (
                 <div className='flex mb-4'>
@@ -115,7 +115,7 @@ export default function ProductPage() {
                 </div>
               )}
             </div>
-            <div className='flex items-center gap-4'>
+            <div className='flex items-center gap-4 xl:mt-0 mt-4'>
               {product.discount.hasDiscount && (
                 <p className='ext-primary font-bold text-4xl'>{formatPrice(product.discount.newPrice)} ₽</p>
               )}

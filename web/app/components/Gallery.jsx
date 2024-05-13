@@ -40,9 +40,11 @@ export default function Gallery({ images, video }) {
     });
   };
 
+  console.log(miniMapIndex)
+
   return (
     <div className='flex flex-row gap-4'>
-      <div className='max-w-28 max-h-[450px] flex flex-col items-center justify-between'>
+      <div className='max-w-28 max-h-[450px] flex-col items-center justify-between xl:flex hidden'>
         {images.length > 3 && (
           <button
             onClick={() => prevMiniMap()}
@@ -63,7 +65,7 @@ export default function Gallery({ images, video }) {
               }`}
               src={urlFor(image).url()}
               alt={image.alt}
-              onClick={() => setCurrentIndex(index)}
+              onClick={() => setCurrentIndex(miniMapIndex + index)}
             />
           ))}
         </div>
@@ -80,7 +82,7 @@ export default function Gallery({ images, video }) {
       <div className='relative'>
         {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
         <img
-          className='w-[400px] h-[450px] object-cover cursor-pointer'
+          className='w-[400px] h-[450px] object-cover cursor-pointer rounded-xl xl:rounded-none'
           src={urlFor(images[currentIndex]).url()}
           alt={images[currentIndex].alt}
           onClick={() => setImageModalIsOpen(prevState => !prevState)}
