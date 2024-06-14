@@ -10,6 +10,10 @@ export default function MenuSection() {
           <h3 className="xl:text-3xl text-xl font-bold text-primary">Ассортимент</h3>
           <div className="xl:w-36 w-20 h-1 bg-quaternary" />
         </div>
+        <p className="xl:text-3xl text-xl font-bold text-primary text-center mb-4">
+          Дорогие невесты, по техническим причинам некоторое<br/>
+          время сайт не отображает модели по наличию.
+        </p>
         <div className="flex xl:flex-row flex-col xl:w-full justify-center gap-4 xl:mx-0 mx-6">
           <div className="flex flex-col gap-4 xl:w-1/4">
             <Link href="/[catalog]" as="/dresses-rental">
