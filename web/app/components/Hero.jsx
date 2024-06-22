@@ -14,8 +14,8 @@ export default function Hero() {
           alt="Логотип свадебного салона Luce e Amore"
           className='xl:w-72 w-48'
         />
-        <h1 className='xl:text-5xl text-2xl font-semibold text-justify text-primary second__font'>Салон свадебных платьев</h1>
-        <h2 className='xl:text-2xl text-lg mt-4 text-justify text-primary font-semibold second__font'>
+        <h1 className='pl-6 xl:text-5xl text-2xl font-semibold text-justify text-primary second__font'>Салон свадебных платьев</h1>
+        <h2 className='pl-6 xl:text-2xl text-lg mt-4 text-justify text-primary font-semibold second__font'>
           Место, где любовь светит ярче
         </h2>
       </div>
